@@ -1,5 +1,4 @@
-absl-py==1.4.0
-alabaster @ file:///home/ktietz/src/ci/alabaster_1611921544520/work
+
 anaconda-client==1.11.0
 anaconda-navigator==2.3.2
 anaconda-project @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_52iciqycjz/croots/recipe/anaconda-project_1660339902500/work
@@ -19,7 +18,6 @@ attrs @ file:///opt/conda/conda-bld/attrs_1642510447205/work
 Automat @ file:///tmp/build/80754af9/automat_1600298431173/work
 autopep8 @ file:///opt/conda/conda-bld/autopep8_1650463822033/work
 Babel @ file:///tmp/build/80754af9/babel_1620871417480/work
-backcall @ file:///home/ktietz/src/ci/backcall_1611930011877/work
 backports.functools-lru-cache @ file:///tmp/build/80754af9/backports.functools_lru_cache_1618170165463/work
 backports.tempfile @ file:///home/linux1/recipes/ci/backports.tempfile_1610991236607/work
 backports.weakref==1.0.post1
@@ -63,21 +61,17 @@ Cython @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_2bx
 cytoolz==0.11.0
 daal4py==2021.6.0
 dask @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_625ab4ad-a7aa-46be-859b-eb7a32fc37bc46adm9wx/croots/recipe/dask-core_1658513219136/work
-datashader @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_543d57cxkz/croots/recipe/datashader_1659349048901/work
 datashape==0.5.4
 debugpy @ file:///opt/concourse/worker/volumes/live/fb0af3c0-b0a4-42c5-46e7-6ce9c84da602/volume/debugpy_1637091827531/work
 decorator @ file:///opt/conda/conda-bld/decorator_1643638310831/work
 defusedxml @ file:///tmp/build/80754af9/defusedxml_1615228127516/work
-diff-match-patch @ file:///Users/ktietz/demo/mc3/conda-bld/diff-match-patch_1630511840874/work
-dill @ file:///tmp/build/80754af9/dill_1623919422540/work
+ill @ file:///tmp/build/80754af9/dill_1623919422540/work
 distributed @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_ca26b14a-a121-44b5-82b0-dbb6ccf35309a1h39fbg/croots/recipe/distributed_1658520748547/work
 docutils @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_10cfb287-0327-45ef-a38e-53dffd30cef1nwpvy20e/croots/recipe/docutils_1657175439973/work
 entrypoints @ file:///opt/concourse/worker/volumes/live/78b2c4ae-da17-4aa7-7fdc-138f840abf07/volume/entrypoints_1649926486598/work
 et-xmlfile==1.1.0
-fastjsonschema @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_b5c1gee32t/croots/recipe/python-fastjsonschema_1661368622875/work
 filelock @ file:///opt/conda/conda-bld/filelock_1647002191454/work
 flake8 @ file:///opt/conda/conda-bld/flake8_1648129545443/work
-Flask @ file:///home/ktietz/src/ci/flask_1611932660458/work
 flatbuffers==23.1.21
 fonttools==4.25.0
 fsspec @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_a6evhlwhh2/croots/recipe/fsspec_1659972205208/work
@@ -93,7 +87,6 @@ greenlet @ file:///opt/concourse/worker/volumes/live/b27b4e9e-4697-4d57-403b-f82
 grpcio==1.51.1
 gunicorn==23.0.0
 h5py @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_7fnj4n39p5/croots/recipe/h5py_1659091379933/work
-HeapDict @ file:///Users/ktietz/demo/mc3/conda-bld/heapdict_1630598515714/work
 holoviews @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_a4562da9-f241-4c26-af69-a183348d22b8tzntcgqc/croots/recipe/holoviews_1658171511476/work
 hvplot @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_20gh5adwn_/croots/recipe/hvplot_1659026499732/work
 hyperlink @ file:///tmp/build/80754af9/hyperlink_1610130746837/work
@@ -115,12 +108,10 @@ isort @ file:///tmp/build/80754af9/isort_1628603791788/work
 itemadapter @ file:///tmp/build/80754af9/itemadapter_1626442940632/work
 itemloaders @ file:///opt/conda/conda-bld/itemloaders_1646805235997/work
 itsdangerous @ file:///tmp/build/80754af9/itsdangerous_1621432558163/work
-jdcal @ file:///Users/ktietz/demo/mc3/conda-bld/jdcal_1630584345063/work
 jedi @ file:///opt/concourse/worker/volumes/live/89be3eb0-a85c-453b-67dd-f706f2fa4c43/volume/jedi_1644315269953/work
 jellyfish @ file:///opt/concourse/worker/volumes/live/a3ea5aa0-13fc-40da-68a6-cbc194ed3c8f/volume/jellyfish_1647962585030/work
 Jinja2 @ file:///tmp/build/80754af9/jinja2_1612213139570/work
 jinja2-time @ file:///opt/conda/conda-bld/jinja2-time_1649251842261/work
-jmespath @ file:///Users/ktietz/demo/mc3/conda-bld/jmespath_1630583964805/work
 joblib @ file:///tmp/build/80754af9/joblib_1635411271373/work
 json5 @ file:///tmp/build/80754af9/json5_1624432770122/work
 jsonschema @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_d832da7jx3/croots/recipe/jsonschema_1663375475386/work
@@ -184,7 +175,6 @@ param @ file:///tmp/build/80754af9/param_1636647414893/work
 parsel @ file:///opt/concourse/worker/volumes/live/82c6082c-054e-4c34-7398-3c26404de88b/volume/parsel_1646739973951/work
 parso @ file:///opt/conda/conda-bld/parso_1641458642106/work
 partd @ file:///opt/conda/conda-bld/partd_1647245470509/work
-pathlib @ file:///Users/ktietz/demo/mc3/conda-bld/pathlib_1629713961906/work
 pathspec @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_e2t1r2kdq7/croots/recipe/pathspec_1659627124303/work
 patsy==0.5.2
 pep8==1.7.1
@@ -206,7 +196,6 @@ psycopg2==2.9.10
 psycopg2-binary==2.9.9
 ptyprocess @ file:///tmp/build/80754af9/ptyprocess_1609355006118/work/dist/ptyprocess-0.7.0-py2.py3-none-any.whl
 py @ file:///opt/conda/conda-bld/py_1644396412707/work
-pyasn1 @ file:///Users/ktietz/demo/mc3/conda-bld/pyasn1_1629708007385/work
 pyasn1-modules==0.2.8
 pycodestyle @ file:///tmp/build/80754af9/pycodestyle_1636635402688/work
 pycosat==0.6.3
@@ -306,7 +295,6 @@ terminado @ file:///opt/concourse/worker/volumes/live/1e61dc32-e381-4730-4e5e-6c
 testpath @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_aaf4aec7-dbb6-43d6-9707-824338b4efc82yrt6xjp/croots/recipe/testpath_1655908558843/work
 text-unidecode @ file:///Users/ktietz/demo/mc3/conda-bld/text-unidecode_1629401354553/work
 textdistance @ file:///tmp/build/80754af9/textdistance_1612461398012/work
-threadpoolctl @ file:///Users/ktietz/demo/mc3/conda-bld/threadpoolctl_1629802263681/work
 three-merge @ file:///tmp/build/80754af9/three-merge_1607553261110/work
 tifffile @ file:///tmp/build/80754af9/tifffile_1627275862826/work
 tinycss @ file:///tmp/build/80754af9/tinycss_1617713798712/work
@@ -326,8 +314,6 @@ typing_extensions==4.11.0
 ujson @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_cf44fbd5-5db0-48cf-86c4-c8d4e74d1cbbwhgckc99/croots/recipe/ujson_1657544919410/work
 Unidecode @ file:///tmp/build/80754af9/unidecode_1614712377438/work
 urllib3 @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_53dwuk2xkk/croots/recipe/urllib3_1659110467968/work
-w3lib @ file:///Users/ktietz/demo/mc3/conda-bld/w3lib_1629359764703/work
-watchdog @ file:///opt/concourse/worker/volumes/live/bc34f9ce-893b-443f-56fb-9256c33ecf2a/volume/watchdog_1638367303330/work
 wcwidth @ file:///Users/ktietz/demo/mc3/conda-bld/wcwidth_1629357192024/work
 webencodings==0.5.1
 websocket-client @ file:///opt/concourse/worker/volumes/live/5baed9cd-40fb-4fbe-6721-9568cdd0f2d7/volume/websocket-client_1614804245073/work
