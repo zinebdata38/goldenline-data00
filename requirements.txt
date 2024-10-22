@@ -91,7 +91,6 @@ google-auth-oauthlib==0.4.6
 google-pasta==0.2.0
 greenlet @ file:///opt/concourse/worker/volumes/live/b27b4e9e-4697-4d57-403b-f82d36a391ca/volume/greenlet_1628888146890/work
 grpcio==1.51.1
-h5py @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_7fnj4n39p5/croots/recipe/h5py_1659091379933/work
 HeapDict @ file:///Users/ktietz/demo/mc3/conda-bld/heapdict_1630598515714/work
 holoviews @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_a4562da9-f241-4c26-af69-a183348d22b8tzntcgqc/croots/recipe/holoviews_1658171511476/work
 hvplot @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_20gh5adwn_/croots/recipe/hvplot_1659026499732/work
@@ -113,7 +112,6 @@ ipywidgets @ file:///tmp/build/80754af9/ipywidgets_1634143127070/work
 isort @ file:///tmp/build/80754af9/isort_1628603791788/work
 itemadapter @ file:///tmp/build/80754af9/itemadapter_1626442940632/work
 itemloaders @ file:///opt/conda/conda-bld/itemloaders_1646805235997/work
-itsdangerous @ file:///tmp/build/80754af9/itsdangerous_1621432558163/work
 jdcal @ file:///Users/ktietz/demo/mc3/conda-bld/jdcal_1630584345063/work
 jedi @ file:///opt/concourse/worker/volumes/live/89be3eb0-a85c-453b-67dd-f706f2fa4c43/volume/jedi_1644315269953/work
 jellyfish @ file:///opt/concourse/worker/volumes/live/a3ea5aa0-13fc-40da-68a6-cbc194ed3c8f/volume/jellyfish_1647962585030/work
