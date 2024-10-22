@@ -67,7 +67,6 @@ datashape==0.5.4
 debugpy @ file:///opt/concourse/worker/volumes/live/fb0af3c0-b0a4-42c5-46e7-6ce9c84da602/volume/debugpy_1637091827531/work
 decorator @ file:///opt/conda/conda-bld/decorator_1643638310831/work
 defusedxml @ file:///tmp/build/80754af9/defusedxml_1615228127516/work
-diff-match-patch @ file:///Users/ktietz/demo/mc3/conda-bld/diff-match-patch_1630511840874/work
 dill @ file:///tmp/build/80754af9/dill_1623919422540/work
 distributed @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_ca26b14a-a121-44b5-82b0-dbb6ccf35309a1h39fbg/croots/recipe/distributed_1658520748547/work
 docutils @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_10cfb287-0327-45ef-a38e-53dffd30cef1nwpvy20e/croots/recipe/docutils_1657175439973/work
@@ -86,7 +85,6 @@ google-auth-oauthlib==0.4.6
 google-pasta==0.2.0
 greenlet @ file:///opt/concourse/worker/volumes/live/b27b4e9e-4697-4d57-403b-f82d36a391ca/volume/greenlet_1628888146890/work
 grpcio==1.51.1
-HeapDict @ file:///Users/ktietz/demo/mc3/conda-bld/heapdict_1630598515714/work
 holoviews @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_a4562da9-f241-4c26-af69-a183348d22b8tzntcgqc/croots/recipe/holoviews_1658171511476/work
 hvplot @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_20gh5adwn_/croots/recipe/hvplot_1659026499732/work
 hyperlink @ file:///tmp/build/80754af9/hyperlink_1610130746837/work
@@ -107,7 +105,6 @@ ipywidgets @ file:///tmp/build/80754af9/ipywidgets_1634143127070/work
 isort @ file:///tmp/build/80754af9/isort_1628603791788/work
 itemadapter @ file:///tmp/build/80754af9/itemadapter_1626442940632/work
 itemloaders @ file:///opt/conda/conda-bld/itemloaders_1646805235997/work
-jdcal @ file:///Users/ktietz/demo/mc3/conda-bld/jdcal_1630584345063/work
 jedi @ file:///opt/concourse/worker/volumes/live/89be3eb0-a85c-453b-67dd-f706f2fa4c43/volume/jedi_1644315269953/work
 jellyfish @ file:///opt/concourse/worker/volumes/live/a3ea5aa0-13fc-40da-68a6-cbc194ed3c8f/volume/jellyfish_1647962585030/work
 Jinja2 @ file:///tmp/build/80754af9/jinja2_1612213139570/work
@@ -175,7 +172,6 @@ param @ file:///tmp/build/80754af9/param_1636647414893/work
 parsel @ file:///opt/concourse/worker/volumes/live/82c6082c-054e-4c34-7398-3c26404de88b/volume/parsel_1646739973951/work
 parso @ file:///opt/conda/conda-bld/parso_1641458642106/work
 partd @ file:///opt/conda/conda-bld/partd_1647245470509/work
-pathlib @ file:///Users/ktietz/demo/mc3/conda-bld/pathlib_1629713961906/work
 pathspec @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_e2t1r2kdq7/croots/recipe/pathspec_1659627124303/work
 patsy==0.5.2
 pep8==1.7.1
