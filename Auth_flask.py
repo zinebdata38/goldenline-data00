@@ -4,7 +4,6 @@
 # In[ ]:
 
 
-get_ipython().system('pip install flask flask-login')
 
 
 # In[ ]:
