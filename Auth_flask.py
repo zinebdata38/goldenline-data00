@@ -63,7 +63,6 @@ if __name__ == '__main__':
 # In[1]:
 
 
-get_ipython().system('pip install flask flask-login')
 
 
 # In[2]:
