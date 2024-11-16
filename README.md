@@ -1,4 +1,5 @@
 Projet GoldenLine
+<<<<<<< HEAD
 # Projet GoldenLine
 
 Ce projet vise à développer une application permettant de gérer et analyser les tickets de caisse pour une entreprise fictive, GoldenLine. Le projet inclut la création d'une base de données relationnelle, l'insertion de données clients et de tickets de caisse, ainsi que la visualisation des données via une interface web interactive.
@@ -86,3 +87,24 @@ Le fichier **`test_app.py`** contient les tests unitaires basés sur le framewor
 1. **Cloner le dépôt GitHub** :
    ```bash
    git clone https://github.com/zinebdata38/goldenline-data00.git
+=======
+# Goldenline Project - Deployment Guide
+
+## Introduction
+Ce projet Goldenline est une application Flask déployée sur Heroku avec une base de données PostgreSQL. Voici les étapes pour déployer et exécuter le projet.
+
+## Prérequis
+- [Python 3.x](https://www.python.org/downloads/) doit être installé.
+- Un compte sur [Heroku](https://www.heroku.com).
+- [Git](https://git-scm.com/) doit être installé.
+
+## Étapes pour cloner et déployer l'application sur Heroku
+
+### 1. Cloner le dépôt Git
+Clonez le dépôt GitHub localement sur votre machine :
+
+```bash
+git clone https://github.com/votre-utilisateur/goldenline-data.git
+cd goldenline-data
+
+>>>>>>> e2e50e752c91847c43b70cf32e0a9b3ffeced5ee
