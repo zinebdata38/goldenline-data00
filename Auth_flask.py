@@ -3,10 +3,6 @@
 
 # In[ ]:
 
-
-get_ipython().system('pip install flask flask-login')
-
-
 # In[ ]:
 
 
@@ -35,6 +31,10 @@ def load_user(user_id):
     return User(user_id)
 
 @app.route('/login', methods=['GET', 'POST'])
+@app.route('/')
+def home():
+    return 'Welcome to the Home Page!'
+
 def login():
     if request.method == 'POST':
         username = request.form['username']
@@ -43,8 +43,9 @@ def login():
             user = User(username)
             login_user(user)
             return redirect(url_for('dashboard'))
-        return 'Invalid credentials'
+        return render_template('login.html', error="Invalid credentials")
     return render_template('login.html')
+
 
 @app.route('/dashboard')
 @login_required
@@ -56,6 +57,10 @@ def dashboard():
 def logout():
     logout_user()
     return redirect(url_for('login'))
+@app.route('/')
+def home():
+    return render_template('index.html')  # Ou ce que vous souhaitez retourner
+
 
 if __name__ == '__main__':
     app.run(debug=False)
@@ -64,7 +69,6 @@ if __name__ == '__main__':
 # In[1]:
 
 
-get_ipython().system('pip install flask flask-login')
 
 
 # In[2]:
