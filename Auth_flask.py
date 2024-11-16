@@ -29,11 +29,10 @@ users = {'user1': {'password': 'password1'}, 'user2': {'password': 'password2'}}
 @login_manager.user_loader
 def load_user(user_id):
     return User(user_id)
-
-@app.route('/login', methods=['GET', 'POST'])
-@app.route('/')
-def home1():
-    return 'Welcome to the Home Page!'
+#@app.route('/login', methods=['GET', 'POST'])
+#@app.route('/')
+#def home1():
+   # return 'Welcome to the Home Page!'
 
 def login():
     if request.method == 'POST':
