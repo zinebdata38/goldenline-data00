@@ -1,13 +1,6 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-# In[ ]:
-
-
 from flask import Flask, render_template, redirect, url_for, request
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
+import os
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your_secret_key'
@@ -29,11 +22,9 @@ users = {'user1': {'password': 'password1'}, 'user2': {'password': 'password2'}}
 @login_manager.user_loader
 def load_user(user_id):
     return User(user_id)
-#@app.route('/login', methods=['GET', 'POST'])
-#@app.route('/')
-#def home1():
-   # return 'Welcome to the Home Page!'
 
+# Définir une route pour le login
+@app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
         username = request.form['username']
@@ -45,35 +36,25 @@ def login():
         return render_template('login.html', error="Invalid credentials")
     return render_template('login.html')
 
-
+# Définir une route pour le tableau de bord
 @app.route('/dashboard')
 @login_required
 def dashboard():
     return f'Hello, {current_user.id}! Welcome to your dashboard.'
 
+# Définir une route pour la déconnexion
 @app.route('/logout')
 @login_required
 def logout():
     logout_user()
     return redirect(url_for('login'))
+
+# Définir une route pour la page d'accueil
 @app.route('/')
 def home():
-    return render_template('index.html')  # Ou ce que vous souhaitez retourner
+    return render_template('index.html')  # Renvoyer un fichier HTML pour la page d'accueil
 
-import os
-from flask import Flask
-
-app = Flask(__name__)
-
-# Définir le port dynamique pour Heroku
+# Définir le port dynamique pour Heroku ou un port local
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
-
-
-if __name__ == '__main__':
-    app.run(debug=False)
-
-
-
-
+    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)), debug=True)
 
