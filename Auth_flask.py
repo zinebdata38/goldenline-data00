@@ -1,60 +1,113 @@
 from flask import Flask, render_template, redirect, url_for, request
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
+from flask_sqlalchemy import SQLAlchemy
 import os
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your_secret_key'
 
-# Configurer Flask-Login
+# Configuration de la base de données
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get(
+    'DATABASE_URL', 'sqlite:///local.db'  # PostgreSQL pour Heroku, SQLite pour le local
+)
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
+
+# Configuration de Flask-Login
 login_manager = LoginManager()
 login_manager.init_app(app)
-login_manager.login_view = 'login'  # Vue à afficher pour la connexion
+login_manager.login_view = 'login'
 
-# Modèle d'utilisateur de base avec Flask-Login
-class User(UserMixin):
-    def __init__(self, id):
-        self.id = id
+# Modèle d'utilisateur
+class User(db.Model, UserMixin):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(150), unique=True, nullable=False)
+    password = db.Column(db.String(150), nullable=False)
 
-# Exemple d'une base de données d'utilisateurs
-users = {'user1': {'password': 'password1'}, 'user2': {'password': 'password2'}}
-
-# Gestion du chargement de l'utilisateur
 @login_manager.user_loader
 def load_user(user_id):
-    return User(user_id)
+    """Charge l'utilisateur en utilisant db.session.get (compatible SQLAlchemy 2.0)."""
+    return db.session.get(User, int(user_id))
 
-# Définir une route pour le login
+# Route pour se connecter
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-        if username in users and users[username]['password'] == password:
-            user = User(username)
-            login_user(user)
+        user = User.query.filter_by(username=username).first()
+        if user and user.password == password:  # Vérifie le mot de passe
+            login_user(user)  # Gère la session utilisateur
             return redirect(url_for('dashboard'))
         return render_template('login.html', error="Invalid credentials")
     return render_template('login.html')
 
-# Définir une route pour le tableau de bord
+# Route pour le tableau de bord
 @app.route('/dashboard')
 @login_required
 def dashboard():
-    return f'Hello, {current_user.id}! Welcome to your dashboard.'
+    return render_template('dashboard.html', username=current_user.username)
 
-# Définir une route pour la déconnexion
+# Route pour se déconnecter
 @app.route('/logout')
 @login_required
 def logout():
     logout_user()
     return redirect(url_for('login'))
 
-# Définir une route pour la page d'accueil
+# Route pour afficher la liste des utilisateurs
+@app.route('/list_users')
+@login_required
+def list_users():
+    users = User.query.all()
+    return render_template('list_users.html', users=users)
+
+# Route pour créer un nouvel utilisateur
+@app.route('/create_user', methods=['GET', 'POST'])
+@login_required
+def create_user():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        
+        # Vérifier si l'utilisateur existe déjà
+        if User.query.filter_by(username=username).first():
+            return render_template('create_user.html', error="User already exists")
+        
+        # Ajouter le nouvel utilisateur
+        new_user = User(username=username, password=password)
+        db.session.add(new_user)
+        db.session.commit()
+        return redirect(url_for('list_users'))
+    return render_template('create_user.html')
+
+# Route pour supprimer un utilisateur
+@app.route('/delete_user/<int:user_id>')
+@login_required
+def delete_user(user_id):
+    user = User.query.get(user_id)
+    if user:
+        db.session.delete(user)
+        db.session.commit()
+    return redirect(url_for('list_users'))
+
+# Route pour la page d'accueil
 @app.route('/')
 def home():
-    return render_template('index.html')  # Renvoyer un fichier HTML pour la page d'accueil
+    return render_template('index.html')
 
-# Définir le port dynamique pour Heroku ou un port local
+# Commande CLI pour initialiser la base de données
+@app.cli.command("init-db")
+def init_db():
+    """Crée la base de données et ajoute un utilisateur par défaut."""
+    db.create_all()
+    if not User.query.filter_by(username='admin').first():
+        admin = User(username="admin", password="admin")
+        db.session.add(admin)
+        db.session.commit()
+    print("Base de données initialisée avec succès.")
+
+# Démarrage de l'application
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)), debug=True)
 
